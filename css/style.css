@@ -1,0 +1,342 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/fonts/Lato-Regular.woff') format('woff'),
+        url('../assets/fonts/Lato-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/fonts/Lato-Bold.woff') format('woff'),
+        url('../assets/fonts/Lato-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smooth: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 35.5%, rgba(0, 0, 0, 0.00) 98%), url('../assets/images/background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 100svh;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    height: 39px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.nav__logo:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+
+.nav__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.nav__icon {
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+}
+
+.nav__icon:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.nav__icon--user {
+    height: 32px;
+    width: 32px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.main__logo {
+    width: 247px;
+    height: 164px;
+}
+
+.main__info-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    list-style: none;
+    font-size: 16px;
+    padding: 0;
+}
+
+.main__info-item {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main__info-list li+li::before {
+    content: url('../assets/images/circle-icon.svg');
+    margin: 0 8px;
+}
+
+.main__description {
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.main__buttons {
+    display: flex;
+    width: 335px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.main__button {
+    display: flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 999px;
+    font-weight: 700;
+    flex: 1 0 0;
+}
+
+.main__button--watch {
+    border: 1px solid #000;
+    background: white;
+}
+
+.main__button--trailer {
+    border: 2px solid #FFF;
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+.main__button-icon {
+    height: 16px;
+}
+
+.main__episodes {
+    display: none;
+}
+
+.main__button {
+    display: flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: filter 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.main__button--watch:hover {
+    filter: invert(100%);
+}
+
+.main__button--trailer:hover {
+    background-color: black;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .nav__logo {
+        height: 48px;
+    }
+
+    .nav__icon--user {
+        height: 48px;
+        width: 48px;
+    }
+
+    .main__logo {
+        height: 250px;
+        width: auto;
+    }
+
+    .main__info-item {
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    .main__description {
+        font-size: 18px;
+    }
+
+    .main__buttons {
+        width: 500px;
+    }
+
+    .main__button {
+        padding-block: 1.2rem;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .container {
+        padding-inline: 5rem;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 30%, rgba(0, 0, 0, 0.00) 98%), url('../assets/images/background.webp') lightgray 50% / cover no-repeat;
+    }
+
+    .nav__icons {
+        gap: 32px;
+    }
+
+    .main {
+        align-items: flex-start;
+    }
+
+    .main__logo {
+        height: 200px;
+    }
+
+    .main__description {
+        font-size: 18px;
+        max-width: 600px;
+        text-align: left;
+    }
+
+    .main__episodes {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .main__episodes-carousel {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-width: calc(100vw - 10rem);
+    }
+
+    .main__episodes-carousel::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .main__episodes-title {
+        color: #FFF;
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .main__episode-img {
+        width: calc((100vw - 5rem) / 5);
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border-radius: 10px;
+        border: 1px solid rgba(76, 0, 255, 0.1);
+        transition: transform ease .3s;
+
+    }
+
+    .main__episode-img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .main__episode-img {
+        width: calc(1600px / 5);
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    display: none;
+}
+
+.overlay.visible {
+    display: block;
+}
+
+.trailer-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    width: 90vw;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    max-width: 1200px;
+}

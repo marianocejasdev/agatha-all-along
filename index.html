@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agatha All Along | Disney+</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+        content="Agatha Harkness gathers a coven of witches and sets off down, down, down The Witches’ Road.">
+    <meta name="author" content="Mariano Cejas - Frontend Developer">
+    <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
+
+
+</head>
+
+<body class="container">
+
+    <div id="overlay" class="overlay hidden"></div>
+    <video id="trailerVideo" class="trailer-video hidden" controls>
+        <source src="./assets/videos/trailer.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
+
+    <header class="header">
+        <nav class="nav">
+            <img class="nav__logo" src="./assets/images/disney-logo.webp" alt="Disney+ Logo" width="72px" height="39px">
+            <div class="nav__icons">
+                <img class="nav__icon" src="./assets/images/search-icon.webp" alt="Search Icon" width="24px"
+                    height="auto">
+                <img class="nav__icon" src="./assets/images/notifications-icon.webp" alt="Notifications Icon"
+                    width="24px" height="auto">
+                <img class="nav__icon nav__icon--user" src="./assets/images/user-picture.webp" alt="User Picture">
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <img class="main__logo" src="./assets/images/agatha-all-along.webp" alt="Agatha All Along - Logo">
+        <ul class="main__info-list">
+            <li class="main__info-item"></li>
+            <li class="main__info-item"></li>
+            <li class="main__info-item"></li>
+        </ul>
+        <p class="main__description"></p>
+
+        <div class="main__buttons">
+            <button class="main__button main__button--watch">WATCH NOW</button>
+            <button id="buttonTrailer" class="main__button main__button--trailer">
+                <img class="main__button-icon" src="./assets/images/play-icon.webp" alt="Play Icon" height="16px"
+                    width="14px">
+                TRAILER
+            </button>
+        </div>
+
+        <section class="main__episodes">
+            <h2 class="main__episodes-title">Episodes</h2>
+            <div id="carousel" class="main__episodes-carousel">
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
